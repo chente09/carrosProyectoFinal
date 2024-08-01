@@ -27,8 +27,7 @@ public class Carros {
     @Size(max = 255, message = "La descripción no puede exceder 255 caracteres")
     private String descripcion;
 
-    @NotBlank(message = "La URL de la imagen es obligatoria")
-    @Pattern(regexp = "(https?://)?(www\\.)?([\\w]+\\.)+[\\w]{2,63}/?.*", message = "La URL de la imagen no es válida")
+
     private String img;
 
     @NotNull(message = "El precio es obligatorio")

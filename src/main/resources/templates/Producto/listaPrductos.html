@@ -65,7 +65,7 @@
             <!--Table Body-->
             <tbody>
                 <tr th:each="carro: ${carros}">
-                    <th scope="row" th:text="${carros.id}"></th>
+                    <th scope="row" th:text="${carro.id}"></th>
                     <td th:text="${carro.marca}"></td>
                     <td th:text="${carro.modelo}"></td>
                     <td th:text="${carro.color}"></td>
