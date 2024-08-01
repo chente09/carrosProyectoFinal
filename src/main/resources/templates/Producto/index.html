@@ -1,10 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Tienda de Carros</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Tienda de Carros</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Modelos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Ofertas</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contacto</a>
+            </li>
+        </ul>
+    </div>
+</nav>
 
+<!-- Header -->
+<header class="jumbotron jumbotron-fluid text-center bg-primary text-white">
+    <div class="container">
+        <h1 class="display-4">Bienvenido a la Tienda de Carros</h1>
+        <p class="lead">Encuentra tu auto ideal con las mejores ofertas</p>
+    </div>
+</header>
+
+<!-- Main content -->
+<div class="container mt-5">
+    <div class="row">
+        <!-- Car 1 -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="car1.jpg" class="card-img-top" alt="Car 1">
+                <div class="card-body">
+                    <h5 class="card-title">Modelo X</h5>
+                    <p class="card-text">El Modelo X combina rendimiento y elegancia con características avanzadas.</p>
+                    <a href="#" class="btn btn-primary">Ver más</a>
+                </div>
+            </div>
+        </div>
+        <!-- Car 2 -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="car2.jpg" class="card-img-top" alt="Car 2">
+                <div class="card-body">
+                    <h5 class="card-title">Modelo Y</h5>
+                    <p class="card-text">Descubre el confort y la tecnología del Modelo Y, perfecto para cualquier aventura.</p>
+                    <a href="#" class="btn btn-primary">Ver más</a>
+                </div>
+            </div>
+        </div>
+        <!-- Car 3 -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="car3.jpg" class="card-img-top" alt="Car 3">
+                <div class="card-body">
+                    <h5 class="card-title">Modelo Z</h5>
+                    <p class="card-text">El Modelo Z redefine la eficiencia y el diseño en un auto compacto.</p>
+                    <a href="#" class="btn btn-primary">Ver más</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3 mt-5">
+    <p>&copy; 2024 Tienda de Carros. Todos los derechos reservados.</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
