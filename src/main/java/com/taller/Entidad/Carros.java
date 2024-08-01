@@ -12,7 +12,7 @@ import jakarta.validation.constraints.*;
 public class Carros {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     @Column(unique = true, nullable = false)
     @NotBlank(message = "La marca es obligatoria")
