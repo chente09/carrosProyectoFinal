@@ -30,7 +30,7 @@ public class ControladorCarros {
     @GetMapping("/formulario")
     public String formularioCarro(Model model){
         model.addAttribute("carros", new Carros());
-        return "/Carros/formulario";
+        return "/Producto/formulario";
     }
 
     @PostMapping("/guardar")
