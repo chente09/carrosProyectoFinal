@@ -18,7 +18,7 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Tienda de Carros</a>
+        <a class="navbar-brand" th:href="@{/index}">Tienda de Carros</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -72,10 +72,10 @@
                     <td th:text="${carro.descripcion}"></td>
                     <td th:text="${carro.precio}"></td>
                     <td th:text="${carro.stock}"></td>
-                    <td><img th:src="${carrp.img}"></td>
+                    <td><img th:src="${carro.img}"></td>
                     <td>
-                        <a th:href="${/editar/}+${carro.id}" class="btn btn-warning text-white">Editar</a>
-                        <a th:href="${/eliminar/}+${carro.id}" class="btn btn-danger text-white">Eliminar</a>
+                        <a th:href="@{/editar/{id}(id=${carro.id})}" class="btn btn-primary">Actualizar</a>
+                        <a th:href="@{/eliminar/{id}(id=${carro.id})}" class="btn btn-danger">Eliminar</a>
                     </td>
                 </tr>
             </tbody>

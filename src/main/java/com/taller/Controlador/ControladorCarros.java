@@ -18,6 +18,12 @@ public class ControladorCarros {
     @Autowired
     CarrosServicio carrosServicio;
 
+    //Index
+    @GetMapping("/index")
+    public String mostrarIndex(Model model){
+        return "/index";
+    }
+
     //LEER
     @GetMapping("/carros")
     public String mostrarProductos(Model model){
@@ -45,7 +51,7 @@ public class ControladorCarros {
     public String actualizarCarro(@PathVariable Long id, Model model){
         Optional<Carros> carros = carrosServicio.buscarCarros(id);
         model.addAttribute("carros", carros);
-        return "/Carros/formulario";
+        return "/Producto/formulario";
     }
 
     //ELIMINAR
