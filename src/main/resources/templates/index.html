@@ -6,7 +6,7 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         .jumbotron-custom {
-          background-image: url('https://images.stockcake.com/public/0/8/8/0889f57f-f3df-4bbb-969b-01f0095ecec1_large/speeding-sports-car-stockcake.jpg');
+          background-image: url('[[@{/img/img2.jpg}]]');
           background-size: cover;
           background-position: center;
         }
@@ -19,23 +19,20 @@
 <body>
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Tienda de Carros</a>
+    <a class="navbar-brand" th:href="@{/index}">Tienda de Carros</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+                <a class="nav-link" th:href="@{/index}">Inicio <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Modelos</a>
+                <a class="nav-link" th:href="@{/formulario}">Formulario</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Ofertas</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Contacto</a>
+                <a class="nav-link" th:href="@{/carros}">Vehículos</a>
             </li>
         </ul>
     </div>
@@ -55,11 +52,11 @@
         <!-- Car 1 -->
         <div class="col-md-4">
             <div class="card">
-                <img src="https://images.stockcake.com/public/c/6/e/c6eb2969-a9bf-47a2-a5e4-4b4cc46d4d8f_large/sleek-black-sedan-stockcake.jpg" class="card-img-top" alt="Car 1">
+                <img th:src="@{/img/img2.jpg}" class="card-img-top" alt="Car 1">
                 <div class="card-body">
                     <h5 class="card-title">Modelo X</h5>
                     <p class="card-text">El Modelo X combina rendimiento y elegancia con características avanzadas.</p>
-                    <a th:href="@{/formulario}" class="btn btn-primary">Ver más</a>
+                    <a th:href="@{/carros}" class="btn btn-primary">Ver más</a>
                 </div>
             </div>
         </div>
@@ -81,7 +78,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Modelo Z</h5>
                     <p class="card-text">El Modelo Z redefine la eficiencia y el diseño en un auto compacto.</p>
-                    <a href="#" class="btn btn-primary">Ver más</a>
+                    <a th:href="@{/carros}" class="btn btn-primary">Ver más</a>
                 </div>
             </div>
         </div>

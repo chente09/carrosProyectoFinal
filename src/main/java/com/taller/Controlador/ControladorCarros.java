@@ -18,6 +18,12 @@ public class ControladorCarros {
     @Autowired
     CarrosServicio carrosServicio;
 
+    //Index
+    @GetMapping("/index")
+    public String mostrarIndex(Model model){
+        return "/index";
+    }
+
     //LEER
     @GetMapping("/carros")
     public String mostrarProductos(Model model){
