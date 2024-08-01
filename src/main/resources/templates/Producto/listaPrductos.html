@@ -65,14 +65,14 @@
             <!--Table Body-->
             <tbody>
                 <tr th:each="carro: ${carros}">
-                    <th scope="row" th:text="${carros.id}"></th>
+                    <th scope="row" th:text="${carro.id}"></th>
                     <td th:text="${carro.marca}"></td>
                     <td th:text="${carro.modelo}"></td>
                     <td th:text="${carro.color}"></td>
                     <td th:text="${carro.descripcion}"></td>
                     <td th:text="${carro.precio}"></td>
                     <td th:text="${carro.stock}"></td>
-                    <td th:text="${carro.img}"></td>
+                    <td><img th:src="${carrp.img}"></td>
                     <td>
                         <a th:href="${/editar/}+${carro.id}" class="btn btn-warning text-white">Editar</a>
                         <a th:href="${/eliminar/}+${carro.id}" class="btn btn-danger text-white">Eliminar</a>
