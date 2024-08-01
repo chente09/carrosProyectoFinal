@@ -12,16 +12,13 @@
           background-size: cover;
           background-position: center;
         }
-        .card-img-top {
-            height: 200px; /* Ajusta la altura según tu preferencia */
-            object-fit: cover; /* Ajusta la imagen para que cubra todo el espacio del contenedor */
-        }
     </style>
 </head>
 <body>
+
     <div class="container">
         <h2>Formulario de Producto</h2>
-        <form th:action="@{/guardar" method="post" th:object="${carros}">
+        <form th:action="@{/guardar}" method="post" th:object="${carros}">
 
             <div class="row">
                 <div class="col-1 mb-3">
