@@ -6,35 +6,30 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         .jumbotron-custom {
-          background-image: url('/static/img/imgBG2.jpg');
+          background-image: url('[[@{/img/imgBG4.jpg}]]');
           background-size: cover;
           background-position: center;
-          height: 300px;
-
         }
     </style>
     <title>Carros</title>
 </head>
 <body>
-    <!-- Navbar -->
+<!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" th:href="@{/index}">Tienda de Carros</a>
+        <a class="navbar-brand text-white" th:href="@{/index}" >Tienda de Carros</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" th:href="@{/index}">Inicio <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Modelos</a>
+                    <a class="nav-link" th:href="@{/formulario}">Formulario</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Ofertas</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contacto</a>
+                    <a class="nav-link" th:href="@{/carros}">Vehículos</a>
                 </li>
             </ul>
         </div>
@@ -42,7 +37,7 @@
     <!-- Header -->
     <header class="jumbotron jumbotron-custom jumbotron-fluid text-center bg-primary text-white">
         <div class="container d-flex justify-content-center align-items-center">
-            <h1 class="display-4">Carros</h1>
+            <h1 class="display-4">Vehículos</h1>
         </div>
     </header>
     <!--Table-->
@@ -64,7 +59,7 @@
             </thead>
             <!--Table Body-->
             <tbody>
-                <tr th:each="carro: ${carros}">
+                <tr th:each="carro: ${carros}" style="align-items: center;" >
                     <th scope="row" th:text="${carro.id}"></th>
                     <td th:text="${carro.marca}"></td>
                     <td th:text="${carro.modelo}"></td>
@@ -72,10 +67,10 @@
                     <td th:text="${carro.descripcion}"></td>
                     <td th:text="${carro.precio}"></td>
                     <td th:text="${carro.stock}"></td>
-                    <td><img th:src="${carro.img}"></td>
+                    <td><img th:src="${carro.img}" style="height:250px; width:500px"></td>
                     <td>
-                        <a th:href="@{/editar/{id}(id=${carro.id})}" class="btn btn-primary">Actualizar</a>
-                        <a th:href="@{/eliminar/{id}(id=${carro.id})}" class="btn btn-danger">Eliminar</a>
+                        <a th:href="@{/editar/{id}(id=${carro.id})}" class="btn btn-primary text-white">Actualizar</a>
+                        <a th:href="@{/eliminar/{id}(id=${carro.id})}" class="btn btn-danger text-white">Eliminar</a>
                     </td>
                 </tr>
             </tbody>
