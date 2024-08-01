@@ -23,14 +23,14 @@ public class ControladorCarros {
     public String mostrarProductos(Model model){
         List<Carros> carros = carrosServicio.listarCarros();
         model.addAttribute("carros", carros);
-        return "/listarCarros";
+        return "/Producto/listaPrductos";
     }
 
     //CREAR
     @GetMapping("/formulario")
     public String formularioCarro(Model model){
         model.addAttribute("carros", new Carros());
-        return "/Carros/formulario";
+        return "/Producto/formulario";
     }
 
     @PostMapping("/guardar")
