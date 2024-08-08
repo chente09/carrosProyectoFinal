@@ -10,11 +10,8 @@
 <body>
 <div class="container mt-3">
     <h2>Formulario Empleado</h2>
-    <form th:action="@{/guardarEmpleado}" method="post" th:object="${cliente}">
-        <div class="mb-3">
-            <label for="id-codigo" class="form-label">Codigo Clientes</label>
-            <input type="number" class="form-control" id="id-codigo" th:field="*{id}">
-        </div>
+    <form th:action="@{/guardarEmpleado}" method="post" th:object="${empleado}">
+
         <div class="mb-3">
             <label for="id-nombre" class="form-label">Nombre</label>
             <input type="text" class="form-control" id="id-nombre" th:field="*{nombre}">
@@ -24,8 +21,12 @@
             <input type="text" class="form-control" id="id-apellido" th:field="*{apellido}">
         </div>
         <div class="mb-3">
-            <label for="id-direccion" class="form-label">Direccion</label>
-            <input type="text" class="form-control" id="id-direccion" th:field="*{direccion}">
+            <label for="id-telefono" class="form-label">Telefono</label>
+            <input type="text" class="form-control" id="id-telefono" th:field="*{telefono}">
+        </div>
+        <div class="mb-3">
+            <label for="id-email" class="form-label">Correo Electrónico</label>
+            <input type="text" class="form-control" id="id-email" th:field="*{email}">
         </div>
         <button type="submit" class="btn btn-primary">Guardar</button>
     </form>
