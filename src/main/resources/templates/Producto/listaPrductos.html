@@ -15,25 +15,31 @@
 </head>
 <body>
 <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand text-white" th:href="@{/index}" >Tienda de Carros</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" th:href="@{/index}">Inicio <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" th:href="@{/formulario}">Formulario</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" th:href="@{/carros}">Vehículos</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" th:href="@{/index}">Tienda de Carros</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" th:href="@{/index}">Inicio <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/formulario}">Formulario</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/carros}">Vehículos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/facturas}">Ventas</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/empleado}">Empleado</a>
+            </li>
+        </ul>
+    </div>
+</nav>
     <!-- Header -->
     <header class="jumbotron jumbotron-custom jumbotron-fluid text-center bg-primary text-white">
         <div class="container d-flex justify-content-center align-items-center">
@@ -81,5 +87,13 @@
         <a th:href="@{/formulario}" class="btn btn-success text-white">Agregar vehículo</a>
         <a th:href="@{/carros/pdf}" class="btn">Descargar Detalle</a>
     </div>
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; 2024 Tienda de Carros. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
