@@ -16,7 +16,6 @@ public class Carros {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false)
     @NotBlank(message = "La marca es obligatoria")
     private String marca;
 
