@@ -5,6 +5,8 @@ import jakarta.validation.constraints.Min;
 import lombok.Data;
 import jakarta.validation.constraints.*;
 
+import java.util.List;
+
 
 @Data
 @Entity
@@ -37,4 +39,9 @@ public class Carros {
     @NotNull(message = "El stock es obligatorio")
     @PositiveOrZero(message = "El stock debe ser un valor positivo")
     private Long stock;
+
+
+
+    @OneToMany(mappedBy = "carros")
+    private List<Factura> facturas;
 }
