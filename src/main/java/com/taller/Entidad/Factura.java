@@ -16,10 +16,15 @@ public class Factura {
     private Long id;
 
     private String numeroFactura;
+
+    @NotNull(message = "EL precio es obligatorio")
     private Double precio;
+
     @NotNull
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date fecha;
+
+
     private String observaciones;
 
 

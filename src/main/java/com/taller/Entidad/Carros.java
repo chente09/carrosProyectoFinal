@@ -28,7 +28,7 @@ public class Carros {
     @Size(max = 255, message = "La descripción no puede exceder 255 caracteres")
     private String descripcion;
 
-
+    @NotNull(message = "La URL de la imagen es obligatoria")
     private String img;
 
     @NotNull(message = "El precio es obligatorio")
